@@ -4,12 +4,16 @@ public class WordCount {
 
 
     public static void main (String[] args) {
-        String str1 = "Today is Holdiay         Day";
+        String str1 = "Hi Im    pramod d";
 
-        String[] wordArray = str1.trim().split("\\s+");
-        int wordCount = wordArray.length;
+        String[] wordCount = str1.trim().split("\\s+");
+        int count = wordCount.length;
 
-        System.out.println("Word count is = " + wordCount);
+        System.out.println("Word count is = " + count);
+
+        for(int i=0;i<wordCount.length;i++){
+           System.out.println(wordCount[i]);
+        }
     }
-    
+
 }
