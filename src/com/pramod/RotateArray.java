@@ -1,33 +1,38 @@
 package com.pramod;
-import java.util.Scanner;
+import java.util.*;
+import java.util.Arrays;
 
 public class RotateArray {
-    public static void main(String[] agrs){
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
+    /*
+    Input: nums = [1,2,3,4,5,6,7], k = 3
+    Output: [5,6,7,1,2,3,4]
+    Explanation:
+    rotate 1 steps to the right: [7,1,2,3,4,5,6]
+    rotate 2 steps to the right: [6,7,1,2,3,4,5]
+    rotate 3 steps to the right: [5,6,7,1,2,3,4]
+     */
+    public static   void rotate(int[] nums, int k) {
+        int[] temp = new int[nums.length];
 
-        int[] a = {1,2,3,4,5,6};
-        int l = a.length;
-        int[] t=a;
-      int temp=0;
-        int[] x = new int[6];
-        for(int i=0; i<a.length;i++) {
-                 for(int j=a.length-1;j>=a.length-n;j--){
-                   temp = a[a.length-n];
-                   a[i]=a[j];
-                   a[j]=temp;
-                   if(n!=-1){
-                       n--;
-                   }
-                    x[i] =a[i];
-                  // System.out.println(a[i]);
-                 }
-
-            for (int y=0;y< a.length-n;y++){
-                t[y+n] = a[y];
-                System.out.println(t[y]);
-            }
+        int p=0;
+        for(int j=nums.length-k;j<nums.length;j++){
+            temp[p]=nums[j];
+            p++;
         }
+        int y=0;
+        for(int i=p;i<nums.length;i++){
+            temp[p]=nums[y];
+            y++;
+            p++;
+        }
+
+            System.out.print(Arrays.toString(temp));
+
+    }
+    public static void main(String[] agrs){
+        int[] r= {1,2,3,4,5,6,7};
+
+      rotate(r,3);
 
 
     }

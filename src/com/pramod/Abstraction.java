@@ -3,16 +3,32 @@ package com.pramod;
 
 abstract class ABS {
 
-    public static int Add(int a, int b){
+    abstract void Mymethod(int a, int b);
+}
 
-        return a+b;
+class  Addition extends ABS {
+
+    @Override
+    void Mymethod(int a, int b) {
+        System.out.println(a+b);
+    }
+
+}
+
+class Subtraction extends ABS{
+
+
+    @Override
+    void Mymethod(int a, int b) {
+        System.out.println(a-b);
     }
 }
 
-class  Abstraction extends  ABS {
+class Abstraction{
     public static void main(String[] args){
-        System.out.println(Add(10,20));
+        ABS obj1 = new Addition();
+        obj1.Mymethod(10,20);
+        ABS obj2 = new Subtraction();
+        obj2.Mymethod(10,5);
     }
-
-
 }

@@ -1,32 +1,26 @@
 package com.pramod;
 
 public class PrimeNumber {
+    public static boolean isPrime(int n) {
+        if (n == 0 || n == 1) {
+            return false;
+        }
+        if (n == 2) {
+            return true;
+        }
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
     public static void main(String[] args){
-        int n=10;
+      System.out.println(isPrime(13));
 
-        for(int i=2;i<=0;i++){
-            if(n%2==0){
-                System.out.println("Prime ");
-            } else{
-                System.out.println("Not Prime ");
-            }
         }
-
-
-        int[] arr = {1,2,3,4,5,6,7};
-
-        for(int j=2;j<arr.length;j++){
-            if(arr[j]%2==0){
-                System.out.println("Not Prime");
-            }else{
-                System.out.println("Prime");
-            }
-        }
-
-
-
-
 
 
     }
-}
+

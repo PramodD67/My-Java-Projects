@@ -1,26 +1,35 @@
 package com.pramod;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 class Solution {
-    public static void reverseString(char[] s) {
 
-        int i=0,j=s.length-1;
-        char temp='a';
-        while(i<j)
-        {
-            temp=s[i];
-            s[i]=s[j];
-            s[j]=temp;
-            i++;
-            j--;
+public static void main(String[] args) {
+    int[] nums= {1,2,1,34,5,2,2,31,1,2,3,4,3,32,23,4};
+
+   Arrays.sort(nums);
+
+
+    for(int m=0;m<nums.length;m++){
+        System.out.println(nums[m]);
+    }
+    int k=0;
+    for(int j=0;j<nums.length-1;j++){
+        if(nums[j]!=nums[j+1]){
+           nums[k++]=nums[j];
+
         }
     }
-    public static void main(String[] args){
-
+    nums[k++]=nums[nums.length-1];
+for (int i=0;i<nums.length;i++){
+    System.out.println(nums[i]);
 }
 
 
+}
+
+}
 
    /* public static void main(String[] args){
       int[] arr= {1,3,5,2,5,2,3,1,8,9,0,7};
@@ -46,4 +55,4 @@ class Solution {
 
     }  */
 
-}
+
