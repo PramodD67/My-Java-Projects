@@ -6,11 +6,7 @@ public class PhrasePalindrome {
         //String n="A man, a plan, a canal: Panama";
         String n="race a car";
 
-
-
             String[] m=   n.trim().split("[,:\\s]");
-
-
 
             for(int i=0;i< m.length;i++){
                 System.out.print(m[i]);
