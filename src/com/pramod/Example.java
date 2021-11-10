@@ -7,7 +7,7 @@ public class Example {
 
     public static void main(String[] args) {
 
-      String e = " How to spend 2.5 rupees out of 10 rupees?";
+   /*   String e = " How to spend 2.5 rupees out of 10 rupees?";
 
         ArrayList<String> st = new ArrayList<>();
 
@@ -17,8 +17,7 @@ public class Example {
 
         System.out.println(st.size());
 
-
-
+  */
 
 
 }}
