@@ -3,17 +3,19 @@ package com.pramod;
 public class SelectionSort {
 
     public static void selectionSort(int[] arr){
-       for(int i=0;i< arr.length;i++){
-           int index=i;
-           for(int j=i+1;j< arr.length;j++){
-               if(arr[j]<arr[index]){
-                   index=j;  //searching lowest index.
-               }
-           }
-           int smallNumber = arr[index];
-           arr[index]=arr[i];
-           arr[i]=smallNumber;
-       }
+        int smallno,index;
+      for(int i=0;i<arr.length;i++){
+          index=i;
+          for(int j=i+1;j< arr.length;j++){
+              if(arr[i]>arr[j]){
+                  index=j; //searching lowest index.
+              }
+          }
+          smallno=arr[index];
+          arr[index]=arr[i];
+          arr[i]=smallno;
+      }
+
 
     }
     public static void main(String a[]){

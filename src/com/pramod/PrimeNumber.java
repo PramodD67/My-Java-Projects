@@ -1,7 +1,9 @@
 package com.pramod;
 
+import java.util.Scanner;
+
 public class PrimeNumber {
-    public static boolean isPrime(int n) {
+   /* public static boolean isPrime(int n) {
         if (n == 0 || n == 1) {
             return false;
         }
@@ -15,10 +17,19 @@ public class PrimeNumber {
         }
 
         return true;
-    }
-    public static void main(String[] args){
-      System.out.println(isPrime(9));
+    }    */
 
+
+
+
+
+
+
+    public static void main(String[] args){
+      //System.out.println(isPrime(9));
+        Scanner scanner = new Scanner(System.in);
+
+         System.out.println( scanner.nextBigInteger().isProbablePrime(100)? "Prime" : "Not prime");
         }
 
 

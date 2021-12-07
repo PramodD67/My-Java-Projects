@@ -7,17 +7,12 @@ public class Example {
 
     public static void main(String[] args) {
 
-   /*   String e = " How to spend 2.5 rupees out of 10 rupees?";
-
-        ArrayList<String> st = new ArrayList<>();
-
-
-            st.add(String.valueOf(e.trim().split("\\s")));
+    String s1="ABC";
+    String s2="XYZ";
 
 
-        System.out.println(st.size());
-
-  */
 
 
-}}
+
+}
+}
